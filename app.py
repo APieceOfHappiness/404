@@ -10,7 +10,7 @@ classes = pd.read_csv('./data.csv')
 X_train = classes['name'] 
 y_train = classes['book'] 
  
-russian_stopwords = ['см','толщина','мм','диаметр','длина','м','из','кг','м3', 'объем','класс','h','мм2','до','от','вт','квт','лс','т','HH','ч','c','мин'] 
+russian_stopwords = ['см', 'толщина', 'мм', 'диаметр', 'длина', 'м', 'из', 'кг', 'м3', 'объем','класс','h','мм2','до','от','вт','квт','лс','т','HH','ч','c','мин'] 
  
 tfidf = TfidfVectorizer(lowercase=True, stop_words=russian_stopwords) 
 X_train_tfidf = tfidf.fit_transform(X_train) 
